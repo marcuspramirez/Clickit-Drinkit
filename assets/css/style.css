@@ -1,0 +1,43 @@
+.container {
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+#header {
+    color: white;
+    font-size: 30px;
+}
+
+.card {
+    margin: 10px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.img-wrapper {
+    position: relative;
+   }
+  
+.img-responsive {
+    width: 12rem;
+    height: 10rem;
+    margin: 10px;  
+}
+  
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+ }
+  
+.img-overlay:before {
+    content: ' ';
+    display: block;
+    height: 65%;
+}
