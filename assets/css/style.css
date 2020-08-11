@@ -1,5 +1,5 @@
 .container {
-    width: 800px;
+    width: 1024px;
     display: block;
     margin: 0 auto;
 }
@@ -40,4 +40,9 @@ header {
     content: ' ';
     display: block;
     height: 65%;
+}
+.carousel img {
+    height: 300px;
+    width: 400px;
+    margin-left: 20px;
 }
