@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./develop/style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div id="cocktail">
-            <ul id="cocktailBtn"></ul>
-            <ul id="ingredientSection"></ul>
-            <ul id="instructionSection"></ul>
+
+        <form id="cocktail">
+            <label for="cocktail-input">Search for a cocktail!</label>
+            <input type="text" id="cocktail" placeholder="Search for cocktail..">
+            <button type="button" id="searchBtn" class="btn btn-secondary btn-sm fa fa-search">Search</button>
+            <br>
+         </form>
+        <div class="searchedCocktail"></div>
+        <div class="row">
+            <div class="col-3">
+                <div class="ingredientSection"></div>
+            </div>
+            <div class="col-3">
+                <div class="ingredientMesr"></div>
+            </div>
         </div>
+        <form>
+            <div class="instructionSection"></div>
+        </form>
+        
+
+
+
         
     </div>
     
