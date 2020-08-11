@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match It - Make It</title>
     <!--link to css-->
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--link to bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+
     <header>
         <nav class="navbar navbar-light bg-primary">
-            <span class="navbar-brand mb-0 h1 text-center">Match It - Make It</span>
+            <span id="header" class="navbar-brand mb-0 h1">Match It - Make It</span>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for a cocktail!" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+              </form>
           </nav>
     </header>
     <!--end of header-->
@@ -26,95 +31,117 @@
     </form>
 -->
 
-
-
-
-    <div class="container hide">
+<body>
+    <div class="container">
         <p>Welcome to Match It - Make It where you can learn fun new drink ideas! Get started by selecting a liquor type.</p>
         <h2>Pick a liquor type</h2> 
 
-            <!--start of liquor type row-->
+            <!--start of row 1-->
             <div class="row">
-                <!--Whiskey card-->
+                <!--Moscow Mule-->
                 <div class = "col-m-2">
-                    <!-- card with image and button with liquor type-->
-                    <div class="card text-center" style="width: 10rem;">
-                        <img src="assets/images/whiskey.jpg" class="card-img-top" alt="Image of Whiskey">
-                        <div class="card-body">
-                          <a href="#" class="btn btn-primary">Whiskey</a>
+                    <div class="img-wrapper">
+                        <img class="img-responsive" src="assets/images/moscowmule.jpg">
+                        <div class="img-overlay">
+                            <a href="#" class="btn btn-primary">Moscow Mule</a>
                         </div>
-                      </div>
-                </div> <!--end of column-->
-
-               <!--Vodka card-->
-               <div class = "col-m-2">
-                    <!-- card with image and button with liquor type-->
-                    <div class="card text-center" style="width: 10rem;">
-                        <img src="assets/images/vodka.jpg" class="card-img-top" alt="Image of Vodka">
-                        <div class="card-body">
-                      <a href="#" class="btn btn-primary">Vodka</a>
                     </div>
-                  </div>
                 </div> <!--end of column-->
+                
 
-                <!--Brandy card-->
+               <!--Margarita-->
                <div class = "col-m-2">
-                    <!-- card with image and button with liquor type-->
-                    <div class="card text-center" style="width: 10rem;">
-                        <img src="assets/images/brandy.jpg" class="card-img-top" alt="Image of Brandy">
-                        <div class="card-body">
-                      <a href="#" class="btn btn-primary">Brandy</a>
+                <div class="img-wrapper">
+                    <img class="img-responsive" src="assets/images/margarita.jpg">
+                    <div class="img-overlay">
+                        <a href="#" class="btn btn-primary">Margarita</a>
                     </div>
-                  </div>
-                 </div> <!--end of column-->
-
-                <!--Rum card-->
-               <div class = "col-m-2">
-                    <!-- card with image and button with liquor type-->
-                    <div class="card text-center" style="width: 10rem;">
-                     <img src="assets/images/rum.jpg" class="card-img-top" alt="Image of Rum">
-                        <div class="card-body">
-                      <a href="#" class="btn btn-primary">Rum</a>
-                    </div>
-                  </div>
-                </div> <!--end of column-->
-
-                <!--Gin card-->
-               <div class = "col-m-2">
-                <!-- card with image and button with liquor type-->
-                <div class="card text-center" style="width: 10rem;">
-                 <img src="assets/images/gin.jpg" class="card-img-top" alt="Image of Gin">
-                    <div class="card-body">
-                  <a href="#" class="btn btn-primary">Gin</a>
                 </div>
-              </div>
-            </div> <!--end of column-->
+                </div> <!--end of column-->
 
-            <!--Tequila card-->
+                <!--Whiskey Sour-->
+               <div class = "col-m-2">
+                <div class="img-wrapper">
+                    <img class="img-responsive" src="assets/images/whiskeysour.jpg">
+                    <div class="img-overlay">
+                        <a href="#" class="btn btn-primary">Whiskey Sour</a>
+                    </div>
+                </div>
+                </div> <!--end of column-->
+
+                <!---Daiquiri-->
+               <div class = "col-m-2">
+                    <div class="img-wrapper">
+                        <img class="img-responsive" src="assets/images/daiquiri.jpg">
+                        <div class="img-overlay">
+                            <a href="#" class="btn btn-primary">Daiquiri</a>
+                        </div>
+                    </div>
+                    </div> <!--end of column-->
+            
+                <!--Manhattan-->
+               <div class = "col-m-2">
+                    <div class="img-wrapper">
+                        <img class="img-responsive" src="assets/images/manhattan.jpeg">
+                        <div class="img-overlay">
+                            <a href="#" class="btn btn-primary">Manhattan</a>
+                        </div>
+                    </div>
+                    </div> <!--end of column-->
+        </div> <!--end of row 1-->
+
+        <!--start of row 2-->
+        <div class="row">
+            <!--Old Fashioned-->
             <div class = "col-m-2">
-                <!-- card with image and button with liquor type-->
-                <div class="card text-center" style="width: 10rem;">
-                 <img src="assets/images/tequila.jpg" class="card-img-top" alt="Image of Tequila">
-                    <div class="card-body">
-                  <a href="#" class="btn btn-primary">Tequila</a>
+                    <div class="img-wrapper">
+                        <img class="img-responsive" src="assets/images/oldfashioned.jpg">
+                        <div class="img-overlay">
+                            <a href="#" class="btn btn-primary">Old Fashioned</a>
+                        </div>
+                    </div>
+                    </div> <!--end of column-->
+
+           <!--Cosmopolitan-->
+           <div class = "col-m-2">
+            <div class="img-wrapper">
+                <img class="img-responsive" src="assets/images/cosmopolitan.jpg">
+                <div class="img-overlay">
+                    <a href="#" class="btn btn-primary">Cosmopolitan</a>
                 </div>
-              </div>
+            </div>
             </div> <!--end of column-->
 
-        </div> <!--end of liquor type row-->
-
-    <h2>Pick a flavor</h2> 
-         <!--Strawberry card-->
-         <div class = "col-m-2">
-            <!-- card with image and button with flavor type-->
-            <div class="card text-center" style="width: 10rem;">
-             <img src="assets/images/strawberry.jpg" class="card-img-top" alt="Image of strawberry">
-                <div class="card-body">
-              <a href="#" class="btn btn-primary">Strawberry</a>
+            <!--Mojito-->
+           <div class = "col-m-2">
+            <div class="img-wrapper">
+                <img class="img-responsive" src="assets/images/mojito.jpg">
+                <div class="img-overlay">
+                    <a href="#" class="btn btn-primary">Mojito</a>
+                </div>
             </div>
-          </div>
-        </div> <!--end of column-->
+            </div> <!--end of column-->
 
+            <!---Sidecar-->
+           <div class = "col-m-2">
+            <div class="img-wrapper">
+                <img class="img-responsive" src="assets/images/sidecar.jpg">
+                <div class="img-overlay">
+                    <a href="#" class="btn btn-primary">Sidecar</a>
+                </div>
+            </div>
+            </div> <!--end of column-->
+        
+            <!--White Russian-->
+           <div class = "col-m-2">
+            <div class="img-wrapper">
+                <img class="img-responsive" src="assets/images/white russian.jpg">
+                <div class="img-overlay">
+                    <a href="#" class="btn btn-primary">White Russian</a>
+                </div>
+            </div>
+            </div> <!--end of column-->
+    </div> <!--end of row 1-->
     </div> <!--end of container-->
 </body>
 </html>
