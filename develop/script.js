@@ -26,9 +26,9 @@ $(document).ready(function () {
         });
     });
 
-    $("#cocktailButton").on('click',function (event) {
+    $('body').on('click', '.buttonClass', function () {
 
-        var cocktail = $("#cocktailButton").text();
+        var cocktail = $(this).attr('id');
         console.log(cocktail);
         
         $.ajax({
