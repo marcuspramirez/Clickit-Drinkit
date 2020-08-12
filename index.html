@@ -7,15 +7,16 @@
     <!--link to css-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--link to bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 
     <header>
         <nav class="navbar navbar-light bg-primary">
             <span id="header" class="navbar-brand mb-0 h1">Match It - Make It</span>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search for a cocktail!" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" id="cocktail" placeholder="Search for a cocktail!" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
               </form>
           </nav>
     </header>
@@ -33,9 +34,10 @@
 
 <body>
     <div class="container">
-        <p>Welcome to Match It - Make It where you can learn fun new drink ideas! Get started by selecting a liquor type.</p>
-        <h2>Pick a liquor type</h2> 
-
+      
+        <div id="home">
+            <p>Welcome to Match It - Make It where you can learn fun new drink ideas! Get started by selecting a liquor type.</p>
+            <h2>Pick a liquor type</h2>
             <!--start of row 1-->
             <div class="row">
                 <!--Moscow Mule-->
@@ -43,20 +45,20 @@
                     <div class="img-wrapper">
                         <img class="img-responsive" src="assets/images/moscowmule.jpg">
                         <div class="img-overlay">
-                            <a href="#" class="btn btn-primary">Moscow Mule</a>
+                            <a href="#" id = "Moscow Mule" class="btn btn-primary buttonClass">Moscow Mule</a>
                         </div>
                     </div>
                 </div> <!--end of column-->
                 
 
                <!--Margarita-->
-               <div class = "col-m-2">
-                <div class="img-wrapper">
-                    <img class="img-responsive" src="assets/images/margarita.jpg">
-                    <div class="img-overlay">
-                        <a href="#" class="btn btn-primary">Margarita</a>
+                <div class = "col-m-2">
+                    <div class="img-wrapper">
+                        <img class="img-responsive" src="assets/images/margarita.jpg">
+                        <div class="img-overlay">
+                            <a href="#" id = "Margarita" class="btn btn-primary buttonClass">Margarita</a>
+                        </div>
                     </div>
-                </div>
                 </div> <!--end of column-->
 
                 <!--Whiskey Sour-->
@@ -64,7 +66,7 @@
                 <div class="img-wrapper">
                     <img class="img-responsive" src="assets/images/whiskeysour.jpg">
                     <div class="img-overlay">
-                        <a href="#" class="btn btn-primary">Whiskey Sour</a>
+                        <a href="#" id = "Whiskey Sour" class="btn btn-primary buttonClass">Whiskey Sour</a>
                     </div>
                 </div>
                 </div> <!--end of column-->
@@ -74,7 +76,7 @@
                     <div class="img-wrapper">
                         <img class="img-responsive" src="assets/images/daiquiri.jpg">
                         <div class="img-overlay">
-                            <a href="#" class="btn btn-primary">Daiquiri</a>
+                            <a href="#" id = "Daiquiri" class="btn btn-primary buttonClass">Daiquiri</a>
                         </div>
                     </div>
                     </div> <!--end of column-->
@@ -84,20 +86,20 @@
                     <div class="img-wrapper">
                         <img class="img-responsive" src="assets/images/manhattan.jpeg">
                         <div class="img-overlay">
-                            <a href="#" class="btn btn-primary">Manhattan</a>
+                            <a href="#" id = "Manhattan" class="btn btn-primary buttonClass">Manhattan</a>
                         </div>
                     </div>
                     </div> <!--end of column-->
-        </div> <!--end of row 1-->
+            </div> <!--end of row 1-->
 
-        <!--start of row 2-->
-        <div class="row">
+            <!--start of row 2-->
+            <div class="row">
             <!--Old Fashioned-->
             <div class = "col-m-2">
                     <div class="img-wrapper">
                         <img class="img-responsive" src="assets/images/oldfashioned.jpg">
                         <div class="img-overlay">
-                            <a href="#" class="btn btn-primary">Old Fashioned</a>
+                            <a href="#" id = "Old Fashioned" class="btn btn-primary buttonClass">Old Fashioned</a>
                         </div>
                     </div>
                     </div> <!--end of column-->
@@ -107,7 +109,7 @@
             <div class="img-wrapper">
                 <img class="img-responsive" src="assets/images/cosmopolitan.jpg">
                 <div class="img-overlay">
-                    <a href="#" class="btn btn-primary">Cosmopolitan</a>
+                    <a href="#" id = "Cosmopolitan" class="btn btn-primary buttonClass">Cosmopolitan</a>
                 </div>
             </div>
             </div> <!--end of column-->
@@ -117,7 +119,7 @@
             <div class="img-wrapper">
                 <img class="img-responsive" src="assets/images/mojito.jpg">
                 <div class="img-overlay">
-                    <a href="#" class="btn btn-primary">Mojito</a>
+                    <a href="#" id = "Mojito" class="btn btn-primary buttonClass">Mojito</a>
                 </div>
             </div>
             </div> <!--end of column-->
@@ -127,7 +129,7 @@
             <div class="img-wrapper">
                 <img class="img-responsive" src="assets/images/sidecar.jpg">
                 <div class="img-overlay">
-                    <a href="#" class="btn btn-primary">Sidecar</a>
+                    <a href="#" id = "Sidecar" class="btn btn-primary buttonClass">Sidecar</a>
                 </div>
             </div>
             </div> <!--end of column-->
@@ -137,11 +139,60 @@
             <div class="img-wrapper">
                 <img class="img-responsive" src="assets/images/white russian.jpg">
                 <div class="img-overlay">
-                    <a href="#" class="btn btn-primary">White Russian</a>
+                    <a href="#"  id = "White Russian"class="btn btn-primary buttonClass">White Russian</a>
                 </div>
             </div>
             </div> <!--end of column-->
     </div> <!--end of row 1-->
+    <div class="flickity" data-flickity='{"wrapAround": true, "freeScroll": true, "autoPlay": true}'>
+        <div class="carousel-cell">
+            <img src="./assets/images/brandy.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/cosmopolitan.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/daiquiri.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/gin.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/whiskey.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/tequila.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/whiskeysour.jpg" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img src="./assets/images/rum.jpg" alt="">
+        </div>
+    </div>
+        
+        
+    </div>
+    <div class="cocktailSlideShow">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner"></div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+        </div>
+        
+    </div>
     </div> <!--end of container-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./develop/script.js"></script>
 </body>
 </html>
