@@ -40,12 +40,12 @@ $(document).ready(function () {
             for (let i = 0; i < cocktails.length; i++) {
                 var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
                 if(i==0)
-                    cocktailImgDiv.addClass("active");
+                    cocktailImgDiv.addClass("active carousel-caption");
                 var imgURL = cocktails[i].strDrinkThumb;
                 var image = $("<img>").attr("src", imgURL);
-                // var cocktailTypes = cocktails[i].strDrink;
+                var cocktailName = cocktails[i].strDrink;
                 // var cocktailTypes = $("<button>").addClass("buttonClass").attr("id", cocktails[i].strDrink).text(cocktails[i].strDrink);
-                cocktailImgDiv.append(image);
+                cocktailImgDiv.append(image, cocktailName);
                 // $(".row").empty();
                 // $(".carousel").empty();
                 $('.carousel-inner').append(cocktailImgDiv);
