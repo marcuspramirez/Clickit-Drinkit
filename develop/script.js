@@ -30,7 +30,7 @@ $(document).ready(function () {
 
         var cocktail = $(this).attr('id');
         console.log(cocktail);
-        
+
         $.ajax({
             url: cocktailUrl + cocktail,
             method: "GET",
@@ -39,12 +39,32 @@ $(document).ready(function () {
             console.log(cocktails);
             for (let i = 0; i < cocktails.length; i++) {
                 var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
-                if(i==0)
+                if (i == 0)
                     cocktailImgDiv.addClass("active carousel-caption");
                 var imgURL = cocktails[i].strDrinkThumb;
                 var image = $("<img>").attr("src", imgURL);
                 var cocktailName = cocktails[i].strDrink;
                 // var cocktailTypes = $("<button>").addClass("buttonClass").attr("id", cocktails[i].strDrink).text(cocktails[i].strDrink);
+
+                // append ingredients and measurements to slide image
+                for (let i = 1; i < 16; i++) {
+                    console.log(i);
+
+                    var ingredients = $("<p>").text(response.drinks[0][`strIngredient${i}`]);
+                    var measurement = $("<p>").text(response.drinks[0][`strMeasure${i}`]);
+
+                    cocktailImgDiv.append(ingredients, measurement);
+                    console.log(ingredients);
+                    console.log(measurement);
+                    cocktailImgDiv.append(instruction);
+                }
+                
+                var instruction = $("<p>").text(response.drinks[0].strInstructions);
+                cocktailImgDiv.append(instruction);
+
+
+
+
                 cocktailImgDiv.append(image, cocktailName);
                 // $(".row").empty();
                 // $(".carousel").empty();
@@ -53,36 +73,36 @@ $(document).ready(function () {
             }
             $("#home").empty();
             $('.cocktailSlideShow').show();
-            
-            
-        });   
-    }); 
 
-    $('body').on('click', '.buttonClass', function () {
-        $('.ingredientSection').empty();
-        $('.instructionSection').empty();
-        var alcohol = $(this).attr('id');
-        console.log(alcohol);
 
-        $.ajax({
-            url: cocktailUrl + alcohol,
-            method: "GET",
-        }).then(function (response) {
-            console.log(response.drinks[0]);
-            var instruction = $("<p>").text(response.drinks[0].strInstructions);
-
-            //This loop gets ingredients and measure
-            for (let i = 1; i < 16; i++) {
-                console.log(i);
-                var ingredients = $("<p>").text(response.drinks[0][`strIngredient${i}`]);
-                var measurement = $("<p>").text(response.drinks[0][`strMeasure${i}`]);
-                $('.ingredientSection').append(ingredients);
-                $('.ingredientMesr').append(measurement);
-            }
-
-            $('.instructionSection').append(instruction);
         });
-    })
+    });
+
+    // $('body').on('click', '.buttonClass', function () {
+    //     $('.ingredientSection').empty();
+    //     $('.instructionSection').empty();
+    //     var alcohol = $(this).attr('id');
+    //     console.log(alcohol);
+
+    //     $.ajax({
+    //         url: cocktailUrl + alcohol,
+    //         method: "GET",
+    //     }).then(function (response) {
+    //         console.log(response.drinks[0]);
+    //         var instruction = $("<p>").text(response.drinks[0].strInstructions);
+
+    //         // //This loop gets ingredients and measure
+    //         for (let i = 1; i < 16; i++) {
+    //             console.log(i);
+    //             var ingredients = $("<p>").text(response.drinks[0][`strIngredient${i}`]);
+    //             var measurement = $("<p>").text(response.drinks[0][`strMeasure${i}`]);
+    //             $('.ingredientSection').append(ingredients);
+    //             $('.ingredientMesr').append(measurement);
+    //         }
+
+    //         $('.instructionSection').append(instruction);
+    //     });
+    // })
 
 
 });
