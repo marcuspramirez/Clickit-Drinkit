@@ -4,9 +4,11 @@
     margin: 0 auto;
 }
 
-#header {
-    color: white;
+#header p {
+    color: orange;
     font-size: 30px;
+    font-family: fantasy;
+    text-align: center;
 }
 
 .card {
@@ -48,6 +50,8 @@ header {
 }
 .row, p, h2{
     padding-left: 40px;
+    color: whitesmoke;
+    z-index: 1;  
 }
 .cocktailSlideShow img {
     width: auto;
@@ -56,4 +60,18 @@ header {
     margin: auto; 
     display: block;
     padding-top: 30px;
+}
+body::before {
+    content: "";
+    background-image: url(../images/bar.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+.flickity{
+    padding-top: 50px;
 }
