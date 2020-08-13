@@ -2,60 +2,16 @@ $(document).ready(function () {
 
     var cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
-    // var userInput = "margarita";
-
     $("#searchBtn").click(function () {
         var cocktail = $("#cocktail").val();
-        $.ajax({
-            url: cocktailUrl + cocktail,
-            method: "GET",
-        }).then(function (response) {
-            var cocktails = response.drinks;
-            var imgURL = response.strDrinkThumb;
-            var image = $("<img>").attr("src", imgURL);
-
-            for (let i = 0; i < cocktails.length; i++) {
-                console.log(cocktails[i].strDrink);
-                var imgURL = cocktails[i].strDrinkThumb;
-                var image = $("<img>").attr("src", imgURL);
-                var cocktailTypes = cocktails[i].strDrink;
-                var cocktailTypes = $("<button>").addClass("buttonClass").attr("id", cocktails[i].strDrink).text(cocktails[i].strDrink);
-                $(".container").empty();
-                $('.container').append(cocktailTypes, image);
-            }
-        });
+        apiResponse(cocktail);
     });
+        
 
     $('body').on('click', '.buttonClass', function () {
 
         var cocktail = $(this).attr('id');
-        console.log(cocktail);
-        
-        $.ajax({
-            url: cocktailUrl + cocktail,
-            method: "GET",
-        }).then(function (response) {
-            var cocktails = response.drinks;
-            console.log(cocktails);
-            for (let i = 0; i < cocktails.length; i++) {
-                var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
-                if(i==0)
-                    cocktailImgDiv.addClass("active carousel-caption");
-                var imgURL = cocktails[i].strDrinkThumb;
-                var image = $("<img>").attr("src", imgURL);
-                var cocktailName = cocktails[i].strDrink;
-                // var cocktailTypes = $("<button>").addClass("buttonClass").attr("id", cocktails[i].strDrink).text(cocktails[i].strDrink);
-                cocktailImgDiv.append(image, cocktailName);
-                // $(".row").empty();
-                // $(".carousel").empty();
-                $('.carousel-inner').append(cocktailImgDiv);
-
-            }
-            $("#home").empty();
-            $('.cocktailSlideShow').show();
-            
-            
-        });   
+        apiResponse(cocktail);
     }); 
 
     $('body').on('click', '.buttonClass', function () {
@@ -83,6 +39,34 @@ $(document).ready(function () {
             $('.instructionSection').append(instruction);
         });
     })
+
+    function apiResponse(cocktail){
+        $.ajax({
+            url: cocktailUrl + cocktail,
+            method: "GET",
+        }).then(function (response) {
+            var cocktails = response.drinks;
+            console.log(cocktails);
+            for (let i = 0; i < cocktails.length; i++) {
+                var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
+                if(i==0)
+                    cocktailImgDiv.addClass("active carousel-caption");
+                var imgURL = cocktails[i].strDrinkThumb;
+                var image = $("<img>").attr("src", imgURL);
+                var cocktailName = cocktails[i].strDrink;
+                // var cocktailTypes = $("<button>").addClass("buttonClass").attr("id", cocktails[i].strDrink).text(cocktails[i].strDrink);
+                cocktailImgDiv.append(image, cocktailName);
+                // $(".row").empty();
+                // $(".carousel").empty();
+                $('.carousel-inner').append(cocktailImgDiv);
+
+            }
+            $("#home").empty();
+            $('.cocktailSlideShow').show();
+            
+            
+        });   
+    }
 
 
 });
