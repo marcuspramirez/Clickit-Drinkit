@@ -14,32 +14,6 @@ $(document).ready(function () {
         apiResponse(cocktail);
     }); 
 
-    $('body').on('click', '.buttonClass', function () {
-        $('.ingredientSection').empty();
-        $('.instructionSection').empty();
-        var alcohol = $(this).attr('id');
-        console.log(alcohol);
-
-        $.ajax({
-            url: cocktailUrl + alcohol,
-            method: "GET",
-        }).then(function (response) {
-            console.log(response.drinks[0]);
-            var instruction = $("<p>").text(response.drinks[0].strInstructions);
-
-            //This loop gets ingredients and measure
-            for (let i = 1; i < 16; i++) {
-                console.log(i);
-                var ingredients = $("<p>").text(response.drinks[0][`strIngredient${i}`]);
-                var measurement = $("<p>").text(response.drinks[0][`strMeasure${i}`]);
-                $('.ingredientSection').append(ingredients);
-                $('.ingredientMesr').append(measurement);
-            }
-
-            $('.instructionSection').append(instruction);
-        });
-    })
-
     function apiResponse(cocktail){
         $.ajax({
             url: cocktailUrl + cocktail,
@@ -47,17 +21,30 @@ $(document).ready(function () {
         }).then(function (response) {
             var cocktails = response.drinks;
             console.log(cocktails);
+
             for (let i = 0; i < cocktails.length; i++) {
                 var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
+                var cocktailReceipieDiv = $("<h4>").text(cocktails[i].strInstructions);
                 if(i==0)
                     cocktailImgDiv.addClass("active carousel-caption");
                 var imgURL = cocktails[i].strDrinkThumb;
-                var image = $("<img>").attr("src", imgURL);
+                var image = $("<img>").attr("src", imgURL).addClass("d-block w-50");
                 var cocktailName = cocktails[i].strDrink;
-                // var cocktailTypes = $("<button>").addClass("buttonClass").attr("id", cocktails[i].strDrink).text(cocktails[i].strDrink);
-                cocktailImgDiv.append(image, cocktailName);
-                // $(".row").empty();
-                // $(".carousel").empty();
+                var ingredientDiv = $("<div>");
+
+                for (let j = 1; j < 16; j++) {
+                    console.log(cocktails[i][`strIngredient${j}`]);
+                    
+                    var ingredients = $("<h5>").text(cocktails[i][`strIngredient${j}`]);
+
+                    var measurement = $("<h5>").text(cocktails[i][`strMeasure${j}`]);
+
+                    ingredientDiv.append(ingredients, measurement);
+
+                }
+
+                cocktailImgDiv.append(image, cocktailName,ingredientDiv, cocktailReceipieDiv);
+
                 $('.carousel-inner').append(cocktailImgDiv);
 
             }

@@ -25,7 +25,7 @@ header {
   
 .img-responsive {
     width: 12rem;
-    height: 10rem;
+    height: 180px;
     margin: 10px;  
 }
   
@@ -42,15 +42,16 @@ header {
     content: ' ';
     display: block;
     height: 65%;
+    
 }
 .flickity img {
-    height: 300px;
+    height: 280px;
     width: 400px;
     margin-left: 20px;
 }
 .row, p, h2{
     padding-left: 40px;
-    color: whitesmoke;
+    color: red;
     z-index: 1;  
 }
 .cocktailSlideShow img {
@@ -59,12 +60,25 @@ header {
     max-height: 445px;
     margin: auto; 
     display: block;
-    padding-top: 30px;
+    bottom: 0;
+    text-align: auto;
 }
+/* #my_logo{
+    background: url(../images/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+    width: 150px;
+    height: 50px;
+    top: 0;
+
+
+} */
 body::before {
     content: "";
-    background-image: url(../images/bar.jpg);
-    opacity: 0.8;
+    background-image: url(../images/qcocktail.jpg);
+    opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
@@ -73,5 +87,7 @@ body::before {
     z-index: -1;   
 }
 .flickity{
-    padding-top: 50px;
+    padding-top: 30px;
 }
+
+
