@@ -25,25 +25,40 @@ $(document).ready(function () {
             for (let i = 0; i < cocktails.length; i++) {
                 var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
                 var cocktailReceipieDiv = $("<h4>").text(cocktails[i].strInstructions);
+                var cocktailTarget = $("<li>").attr("data-target","#carouselExampleIndicators").attr("data-slide-to",'"' + i + '"' );
                 if(i==0)
-                    cocktailImgDiv.addClass("active carousel-caption");
+                    cocktailImgDiv.addClass("active");
+                    // cocktailTarget.addClass("active");
                 var imgURL = cocktails[i].strDrinkThumb;
-                var image = $("<img>").attr("src", imgURL).addClass("d-block w-50");
-                var cocktailName = cocktails[i].strDrink;
-                var ingredientDiv = $("<div>");
+                var image = $("<img>").attr("src", imgURL);
+                var cocktailName = $("<div>").text(cocktails[i].strDrink).addClass("names");
+                var ingredientsTable = $('<table>');
+
+                var tableHeader = $("<tr>");
+
+                var ingredientsHeader = $("<th>").text("Ingredients");
+
+                var measurementHeader = $("<th>").text("Measurement");
+
+                tableHeader.append(ingredientsHeader, measurementHeader);
+                ingredientsTable.append(tableHeader);
 
                 for (let j = 1; j < 16; j++) {
-                    console.log(cocktails[i][`strIngredient${j}`]);
+                    var tablerow = $("<tr>")
                     
-                    var ingredients = $("<h5>").text(cocktails[i][`strIngredient${j}`]);
 
-                    var measurement = $("<h5>").text(cocktails[i][`strMeasure${j}`]);
+                    var ingredients = $("<td>").text(cocktails[i][`strIngredient${j}`]);
 
-                    ingredientDiv.append(ingredients, measurement);
+                    var measurement = $("<td>").text(cocktails[i][`strMeasure${j}`]);
 
+                    tablerow.append(ingredients, measurement);
+                    ingredientsTable.append(tablerow);
                 }
 
-                cocktailImgDiv.append(image, cocktailName,ingredientDiv, cocktailReceipieDiv);
+                
+                $(".carousel-indicators").append(cocktailTarget);
+
+                cocktailImgDiv.append(image, cocktailName,ingredientsTable, cocktailReceipieDiv);
 
                 $('.carousel-inner').append(cocktailImgDiv);
 
