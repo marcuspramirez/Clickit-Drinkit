@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+.container h2{
+    padding-left: 40px;
+    color: red;
+}
+
 #header p {
     color: orange;
     font-size: 30px;
@@ -25,7 +30,7 @@ header {
   
 .img-responsive {
     width: 12rem;
-    height: 10rem;
+    height: 180px;
     margin: 10px;  
 }
   
@@ -42,15 +47,16 @@ header {
     content: ' ';
     display: block;
     height: 65%;
+    
 }
 .flickity img {
-    height: 300px;
+    height: 280px;
     width: 400px;
     margin-left: 20px;
 }
-.row, p, h2{
+.row, p{
     padding-left: 40px;
-    color: whitesmoke;
+    color: red;
     z-index: 1;  
 }
 .cocktailSlideShow img {
@@ -59,12 +65,22 @@ header {
     max-height: 445px;
     margin: auto; 
     display: block;
-    padding-top: 30px;
+    bottom: 0;
+    text-align: auto;
+
 }
+.cocktailSlideShow table {
+    border: red;
+}
+.cocktailSlideShow .names{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body::before {
     content: "";
-    background-image: url(../images/bar.jpg);
-    opacity: 0.8;
+    background-image: url(../images/qcocktail.jpg);
+    opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
@@ -73,7 +89,7 @@ body::before {
     z-index: -1;   
 }
 .flickity{
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .modal-backdrop {
@@ -91,14 +107,14 @@ body::before {
     text-align: center;
   }
 
-  .btn {
+  #ageModal.btn {
     border-radius: 0 !important;
     color: #c8b328;
     border: 2px solid #c8b328 !important;
     padding: .5rem 3rem !important;
   }
 
-  .btn:hover {
+  #ageModal.btn:hover {
     background: #c8b328;
     color:  blue;
     border: 2px solid #fff !important;
@@ -109,4 +125,10 @@ body::before {
       margin-bottom:.5rem;
     }
     
+  }
+  #ageModal img{
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 100px;
   }
