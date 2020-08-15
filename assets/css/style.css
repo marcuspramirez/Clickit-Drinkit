@@ -92,5 +92,43 @@ body::before {
     padding-top: 30px;
 }
 
+.modal-backdrop {
+    opacity: 0.75 !important;
+  }
 
+  .modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 5rem;
+    background: rgb(116, 3, 3);
+    border: 1px solid #c8b328;
+    text-align: center;
+  }
 
+  #ageModal.btn {
+    border-radius: 0 !important;
+    color: #c8b328;
+    border: 2px solid #c8b328 !important;
+    padding: .5rem 3rem !important;
+  }
+
+  #ageModal.btn:hover {
+    background: #c8b328;
+    color:  blue;
+    border: 2px solid #fff !important;
+    padding: .5rem 3rem !important;
+  }
+  @media (max-width:768px) {
+    .mobile-margin-bottom{
+      margin-bottom:.5rem;
+    }
+    
+  }
+  #ageModal img{
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 100px;
+  }
