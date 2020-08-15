@@ -93,42 +93,53 @@ body::before {
 }
 
 .modal-backdrop {
-    opacity: 0.75 !important;
+    opacity: 0.95 !important;
+    border-radius: 20px;
   }
 
-  .modal-body {
-    position: relative;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 5rem;
-    background: rgb(116, 3, 3);
-    border: 1px solid #c8b328;
-    text-align: center;
-  }
+.modal-body {
+position: relative;
+-webkit-box-flex: 1;
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+padding: 5rem;
+background: rgb(116, 3, 3);
+text-align: center;
+border-radius: 20px;
+}
 
-  #ageModal.btn {
-    border-radius: 0 !important;
-    color: #c8b328;
-    border: 2px solid #c8b328 !important;
-    padding: .5rem 3rem !important;
-  }
+#ageModal.btn {
+border-radius: 0 !important;
+color: #c8b328;
+border: 1px solid #c8b328 !important;
+padding: .5rem 3rem !important;
+}
 
-  #ageModal.btn:hover {
-    background: #c8b328;
-    color:  blue;
-    border: 2px solid #fff !important;
-    padding: .5rem 3rem !important;
-  }
-  @media (max-width:768px) {
-    .mobile-margin-bottom{
-      margin-bottom:.5rem;
-    }
-    
-  }
-  #ageModal img{
-      top: 0;
-      left: 0;
-      height: 100px;
-      width: 100px;
-  }
+#ageModal.btn:hover {
+background: #c8b328;
+color:  blue;
+border: 2px solid #fff !important;
+padding: .5rem 3rem !important;
+}
+@media (max-width:768px) {
+.mobile-margin-bottom{
+    margin-bottom:.5rem;
+}
+
+}
+#ageModal img{
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+}
+#age-submit {
+    border: #C8B328 solid;
+    border-radius: 10px;
+}
+.hidden-xs {
+    padding-top: 20px;
+}
+.img-wrapper img{
+    border-radius: 27px;
+}
