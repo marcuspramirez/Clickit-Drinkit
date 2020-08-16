@@ -124,6 +124,7 @@ $(document).ready(function () {
 
     } else {
       //  cookie.set('validAge', 'false');
+      $('#notTwentyOne').html('Sorry, not 21!')
       console.log("it is false");
     }
   }
