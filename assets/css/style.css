@@ -143,3 +143,9 @@ padding: .5rem 3rem !important;
 .img-wrapper img{
     border-radius: 27px;
 }
+
+.hidden-xx {
+    padding: 0px;
+    color: white;
+    font-style: italic;
+}
