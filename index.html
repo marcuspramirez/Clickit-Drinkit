@@ -20,21 +20,75 @@
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-dark bg-dark">
-            
-            <span id="header" class=" navbar-brand mb-0 h1 animate__animated animate__zoomIn">
-                <a class="homeBtn" href="#">
-                <i id="font" class="fa fa-home icon-2x" aria-hidden="true"></i></a>
-                Click It - Drink It
-            </span>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" id="cocktail" placeholder="Search by cocktail name!"
-                    aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
-            </form>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+        
+        <span id="header" class=" navbar-brand mb-0 h1 animate__animated animate__zoomIn">
+            <a class="homeBtn" href="#">
+            <i id="font" class="fa fa-home icon-2x" aria-hidden="true"></i></a>
+            Click It - Drink It
+        </span>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" id="cocktail" placeholder="Search by cocktail name!"
+                aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+        </form>
+    </nav>
+  </header>
+
+    <!-- Age Verification -->
+
+
+    <div class="modal fade" id="ageModal" role="dialog" aria-labelledby="gridSystemModalLabel" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <img src="./assets/images/user1.png">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12" id="modal-age-limit" style="margin-bottom: 2.5rem;
+            color: #fff;">
+              <h3 class="hidden-xs"><strong>MUST BE 21 TO ENTER</strong></h3>
+            </div>
+            <div class="col-xs-4 col-sm-4 mobile-margin-bottom">
+              <select name="month" class="form-control" id="verify-month">
+                <option value="none">Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div class="col-xs-4 col-sm-4 mobile-margin-bottom">
+              <select name="day" class="form-control" id="verify-day">
+                <option value="none">Day</option>
+              </select>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <select name="Year" class="form-control" id="verify-year">
+                <option value="none">Year</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-lg-12" id="age-submit-area" style="margin-top: 2rem;
+            color: #fff;">
+              <a href="#" class="btn btn-default" id="age-submit" style="color: white;">SUBMIT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
     <div class="container">
         <div id="home">
@@ -186,7 +240,6 @@
                 </div>
             </div>
 
-
         </div>
         <div class="cocktailSlideShow">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -202,7 +255,6 @@
             </div>
 
         </div>
-        <div class="reload"></div>
     </div>
     <!--end of container-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
