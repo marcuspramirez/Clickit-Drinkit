@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  $('.cocktailSlideShow').hide();
+  $("#home").hide();
+  $("#ageModal").show();
+
   var age = {};
 
   function getCookie(cname) {
@@ -112,10 +116,12 @@ $(document).ready(function () {
       // cookie.set('validAge', 'true');
 
       setCookie('popupCookie', 'submited', 1);
-
-
-
       $('#ageModal').modal('hide');
+      // window.location.assign("./index.html")
+      $('.cocktailSlideShow').hide();
+      $("#home").show();
+      $("#ageModal").hide();
+
     } else {
       //  cookie.set('validAge', 'false');
       console.log("it is false");
@@ -137,6 +143,7 @@ $(document).ready(function () {
   }); 
 
   function apiResponse(cocktail){
+      console.log(cocktail);
       $.ajax({
           url: cocktailUrl + cocktail,
           method: "GET",
@@ -147,10 +154,10 @@ $(document).ready(function () {
           for (let i = 0; i < cocktails.length; i++) {
               var cocktailImgDiv = $("<div class='cocktail'>").addClass("carousel-item");
               var cocktailReceipieDiv = $("<h6>").text(cocktails[i].strInstructions);
-              var cocktailTarget = $("<li>").attr("data-target","#carouselExampleIndicators").attr("data-slide-to",'"' + i + '"' );
+              
               if(i==0)
                   cocktailImgDiv.addClass("active");
-                  // cocktailTarget.addClass("active");
+
               var imgURL = cocktails[i].strDrinkThumb;
               var image = $("<img>").attr("src", imgURL);
               var cocktailName = $("<div>").text(cocktails[i].strDrink).addClass("names");
@@ -177,19 +184,25 @@ $(document).ready(function () {
                   ingredientsTable.append(tablerow);
               }
 
-              
-              $(".carousel-indicators").append(cocktailTarget);
-
               cocktailImgDiv.append(image, cocktailName,ingredientsTable, cocktailReceipieDiv);
 
-              $('.carousel-inner').append(cocktailImgDiv);
+              if(i == 0){
+                $('.carousel-inner').html(cocktailImgDiv);
+              }else{
+                $('.carousel-inner').append(cocktailImgDiv);
+              }
 
           }
-          $("#home").empty();
+          $("#home").hide();
           $('.cocktailSlideShow').show();
           
           
       });   
   }
- 
+  $(".homeBtn").click(function () {
+    $('.cocktailSlideShow').hide();
+    $("#home").show();
+  });
+  
+
 });

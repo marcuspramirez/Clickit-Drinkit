@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"  crossorigin="anonymous" />
 </head>
 
 
@@ -19,16 +20,21 @@
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-dark bg-dark">
-            <span id="header" class="navbar-brand mb-0 h1 animate__animated animate__zoomIn">Click It - Drink It</span>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" id="cocktail" placeholder="Search for a cocktail!"
-                    aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
-            </form>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+        
+        <span id="header" class=" navbar-brand mb-0 h1 animate__animated animate__zoomIn">
+            <a class="homeBtn" href="#">
+            <i id="font" class="fa fa-home icon-2x" aria-hidden="true"></i></a>
+            Click It - Drink It
+        </span>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" id="cocktail" placeholder="Search by cocktail name!"
+                aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+        </form>
+    </nav>
+  </header>
 
     <!-- Age Verification -->
 
@@ -233,7 +239,6 @@
                     <img src="./assets/images/rum.jpg" alt="">
                 </div>
             </div>
-
 
         </div>
         <div class="cocktailSlideShow">
