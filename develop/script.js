@@ -112,10 +112,8 @@ $(document).ready(function () {
       // cookie.set('validAge', 'true');
 
       setCookie('popupCookie', 'submited', 1);
-
-
-
       $('#ageModal').modal('hide');
+      window.location.assign("./index.html")
     } else {
       //  cookie.set('validAge', 'false');
       console.log("it is false");
@@ -191,5 +189,8 @@ $(document).ready(function () {
           
       });   
   }
- 
+  $(".homeBtn").click(function () {
+    window.location.assign("./index.html");
+  });
+
 });
