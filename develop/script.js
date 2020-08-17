@@ -132,11 +132,11 @@ $(document).ready(function () {
   var cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
   $("#searchBtn").click(function () {
+      $("#ageModal").hide();
       var cocktail = $("#cocktail").val();
       apiResponse(cocktail);
   });
       
-
   $('body').on('click', '.buttonClass', function () {
 
       var cocktail = $(this).attr('id');
