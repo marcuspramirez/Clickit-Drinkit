@@ -149,3 +149,9 @@ padding: .5rem 3rem !important;
     color: white;
     font-style: italic;
 }
+#font{
+    padding-left: 20px;
+}
+.homeBtn{
+    padding-right: 30px;
+}
