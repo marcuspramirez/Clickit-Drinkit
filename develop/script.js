@@ -26,6 +26,11 @@ $(document).ready(function () {
     $('#ageModal').modal('show');
     initAge();
   }
+  else{
+    $('.cocktailSlideShow').hide();
+    $("#home").show();
+    $("#ageModal").hide();
+  }
 
   // starts the age verification process
   function initAge() {
@@ -132,7 +137,7 @@ $(document).ready(function () {
   var cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
   $("#searchBtn").click(function () {
-      $("#ageModal").hide();
+      
       var cocktail = $("#cocktail").val();
       apiResponse(cocktail);
   });
@@ -194,6 +199,7 @@ $(document).ready(function () {
               }
 
           }
+          $("#ageModal").hide();
           $("#home").hide();
           $('.cocktailSlideShow').show();
           
