@@ -19,3 +19,6 @@ THEN I will be presented with a carousel with choices of specific cocktails and 
 ![Alt text](/assets/images/initialPage.JPG?raw=true "Initial Page")
 ![Alt text](/assets/images/ageValidation.JPG?raw=true "ageValidation")
 
+Link to deployed application: https://marcuspramirez.github.io/Clickit-Drinkit/
+Link to Google Slides: https://docs.google.com/presentation/d/125t6XSnXaTBh7fuvSW5BXeApRZ_ML8o3WT0WFDpS4wE/edit?ts=5f383384#slide=id.g920383aedf_0_5
+
