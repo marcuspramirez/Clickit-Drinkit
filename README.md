@@ -1,9 +1,10 @@
 # Clickit-Drinkit
 
-User Story  
-AS an app user in quarantine  
-I WANT an application that helps me to learn how to make cocktails  
-SO THAT I can make multiple varieties of cocktails on the fly  
+This app was created to allow users to learn how to make their favorite drinks, or even better, discover new ones.  
+
+
+
+
 
 Acceptance Criteria  
 GIVEN I am using the app  
